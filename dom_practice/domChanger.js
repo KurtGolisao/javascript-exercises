@@ -32,8 +32,8 @@ body.appendChild(div);
 
 divChildHeader1.classList.add("divChildHeader1");
 divChildHeader1.textContent = "I'm in a div!";
-body.appendChild(divChildHeader1);
+div.appendChild(divChildHeader1);
 
 divChildParagraph.classList.add("divChildParagraph");
 divChildParagraph.textContent = "ME TOO!";
-body.appendChild(divChildParagraph);
+div.appendChild(divChildParagraph);
