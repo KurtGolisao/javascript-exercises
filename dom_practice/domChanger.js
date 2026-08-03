@@ -8,7 +8,10 @@
 
 
 
-
+const body = document.querySelector("body");
 const redParagraph = document.createElement("p");
+
+redParagraph.classList.add("redParagraph");
 redParagraph.textContent = "Hey I'm red!";
 redParagraph.style.color = "red";
+body.appendChild(redParagraph);
