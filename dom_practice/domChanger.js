@@ -10,8 +10,17 @@
 
 const body = document.querySelector("body");
 const redParagraph = document.createElement("p");
+const blueHeader3 = document.createElement("h3");
+const div = document.createElement("div");
+const divChildHeader1 = document.createElement("h1");
+const divChildParagraph = document.createElement("p");
 
 redParagraph.classList.add("redParagraph");
 redParagraph.textContent = "Hey I'm red!";
 redParagraph.style.color = "red";
 body.appendChild(redParagraph);
+
+blueHeader3.classList.add("blueHeader3");
+blueHeader3.textContent = "I'm blue h3!";
+blueHeader3.style.color = "blue";
+body.appendChild(blueHeader3);
