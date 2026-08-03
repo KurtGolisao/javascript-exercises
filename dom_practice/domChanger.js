@@ -24,3 +24,12 @@ blueHeader3.classList.add("blueHeader3");
 blueHeader3.textContent = "I'm blue h3!";
 blueHeader3.style.color = "blue";
 body.appendChild(blueHeader3);
+
+div.classList.add("parentDiv");
+div.style.backgroundColor = "pink";
+div.style.border = "solid";
+body.appendChild(div);
+
+divChildHeader1.classList.add("divChildHeader1");
+divChildHeader1.textContent = "I'm in a div";
+body.appendChild(divChildHeader1);
