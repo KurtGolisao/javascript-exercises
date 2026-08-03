@@ -15,7 +15,6 @@
         color: #666;
       }
     </style>
-    <script src="shopDOM.js" defer></script>
   </head>
   <body>
 
@@ -24,7 +23,7 @@
     <form>
       <label for="item">Enter a new item:</label>
       <input type="text" name="item" id="item">
-      <button>Add item</button>
+      <button id="addButton">Add item</button>
     </form>
 
     <ul>
@@ -32,7 +31,39 @@
     </ul>
 
     <script>
+      const ul = document.querySelector("ul");
+      const input = document.querySelector("input");
+      const addButton = document.querySelector("#addButton");
+      
 
+      function addItem(event) {
+        event.preventDefault();
+        const inputText = input.value;
+        input.value = "";
+
+        const li = document.createElement("li");
+        const span = document.createElement("span");
+        const deleteButton = document.createElement("button");
+
+        li.textContent = inputText;
+        deleteButton.textContent = "Delete";
+        deleteButton.style.color = "black";
+
+        li.appendChild(span);
+        li.appendChild(deleteButton);
+
+        ul.appendChild(li);
+
+        deleteButton.addEventListener("click", () => {
+          ul.removeChild(li);
+        });
+
+        input.focus();
+      };
+
+      addButton.addEventListener("click", addItem)
+
+      
     </script>
   </body>
 </html>
